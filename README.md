@@ -13,7 +13,6 @@ Aplikasi ini dikembangkan berdasarkan panduan resmi Flutter:
 ## 🚀 Fitur
 
 - Layout menggunakan Row, Column, dan Container
-- UI responsif untuk berbagai ukuran layar
 - Menggunakan package `english_words` untuk menghasilkan pasangan kata
 - Manajemen state menggunakan `Provider`
 
