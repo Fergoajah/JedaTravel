@@ -31,3 +31,14 @@ git clone https://github.com/Fergoajah/Flutter-APK-2-Building-Layouts-.git
 cd Flutter-APK-2-Building-Layouts-
 flutter pub get
 flutter run
+```
+
+## Build Aplikasi
+Untuk membangun APK versi release:
+
+```bash
+flutter build apk --release
+```
+
+File APK akan berada di:
+build/app/outputs/flutter-apk/app-release.apk
