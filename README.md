@@ -42,3 +42,10 @@ flutter build apk --release
 
 File APK akan berada di:
 build/app/outputs/flutter-apk/app-release.apk
+
+
+## 📱 Preview Aplikasi
+
+Berikut adalah tampilan aplikasi Flutter yang dibuat berdasarkan tutorial [Flutter Layout](https://docs.flutter.dev/ui/layout/tutorial):
+
+![flutter-build-layout](https://github.com/user-attachments/assets/6e57865d-0bf0-4406-8def-10ff55524ced)
