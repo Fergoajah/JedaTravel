@@ -1,16 +1,34 @@
-# flutter_application_3
+# Flutter APK: Membangun Layout
 
-A new Flutter project.
+Sebuah aplikasi Flutter yang dibuat dengan mengikuti tutorial resmi dari Flutter:  
+➡️ [https://docs.flutter.dev/ui/layout/tutorial](https://docs.flutter.dev/ui/layout/tutorial)
 
-## Getting Started
+Proyek ini dibuat untuk mempraktikkan konsep layout UI seperti penggunaan Row, Column, Container, dan pengaturan teks.
 
-This project is a starting point for a Flutter application.
+## 📚 Referensi Tutorial
 
-A few resources to get you started if this is your first Flutter project:
+Aplikasi ini dikembangkan berdasarkan panduan resmi Flutter:  
+[https://docs.flutter.dev/ui/layout/tutorial](https://docs.flutter.dev/ui/layout/tutorial)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🚀 Fitur
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Layout menggunakan Row, Column, dan Container
+- UI responsif untuk berbagai ukuran layar
+- Menggunakan package `english_words` untuk menghasilkan pasangan kata
+- Manajemen state menggunakan `Provider`
+
+## 📱 Memulai Proyek
+
+### Syarat
+
+- Flutter SDK
+- Perangkat Android atau emulator
+- VS Code atau Android Studio
+
+### Cara Instalasi
+
+```bash
+git clone https://github.com/Fergoajah/Flutter-APK-2-Building-Layouts-.git
+cd Flutter-APK-2-Building-Layouts-
+flutter pub get
+flutter run
