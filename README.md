@@ -52,16 +52,16 @@ Berikut adalah tampilan aplikasi Flutter Jeda Travel
 ![image](https://github.com/user-attachments/assets/9180457c-79ba-4623-a875-6c3fb934b8d1)
 
 ### Homa Page
-Darkmode
+#### Darkmode 
 ![image](https://github.com/user-attachments/assets/69b1504b-bf1c-4aea-9640-7a1971b24dd7)
 
-Lightmode
+#### Ligtmode
 ![image](https://github.com/user-attachments/assets/9fad7cb3-97b5-4d37-8a84-d2475a6dede4)
 
 ### Konten Page(Detail Page)
-Darkmode
+#### Darkmode
 ![image](https://github.com/user-attachments/assets/79272299-ff94-428d-ba7b-1b6fdbb72a67)
 
-Lightmode
+#### Lightmode
 ![image](https://github.com/user-attachments/assets/196f8581-6a00-454f-a1d5-e7e15e521a8a)
 
