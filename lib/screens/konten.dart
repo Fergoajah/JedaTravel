@@ -26,6 +26,7 @@ class _KontenPageState extends State<KontenPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // bagian atas dari layar seperti top navbar
       appBar: AppBar(
         leading: IconButton(
           // Button Back

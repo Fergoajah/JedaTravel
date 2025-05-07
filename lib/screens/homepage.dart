@@ -260,6 +260,7 @@ class RecomendationPlace extends StatelessWidget {
                   padding: const EdgeInsets.all(8),
                   child: Row(
                     children: [
+                      // memotong gambar pada child menjadi rounded
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: Image.asset(

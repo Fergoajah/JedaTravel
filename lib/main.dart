@@ -35,19 +35,7 @@ class _MyAppState extends State<MyApp> {
 
 
       // Menentukan tema berdasarkan status _isDarkMode
-      theme: _isDarkMode
-          ? ThemeData.dark().copyWith(
-              // Menggunakan font Comic Neue untuk tema gelap
-              textTheme: GoogleFonts.comicNeueTextTheme(
-                ThemeData.dark().textTheme,
-              ),
-            )
-          : ThemeData.light().copyWith(
-              // Menggunakan font Comic Neue untuk tema terang
-              textTheme: GoogleFonts.comicNeueTextTheme(
-                ThemeData.light().textTheme,
-              ),
-            ),
+      theme: _isDarkMode ? ThemeData.dark().copyWith() : ThemeData.light().copyWith(),
 
 
       initialRoute: '/login', // Halaman awal saat aplikasi dijalankan

@@ -16,16 +16,19 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+   //kerangka dasar
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(
+          padding: const EdgeInsets.all( // Padding di sekitar isi dari searchbar seperti text dan icon
             24.0,
-          ), // Padding di sekitar isi dari searchbar seperti text dan icon
+          ),
+          // Agar bisa discroll jika keyboard muncul
           child: SingleChildScrollView(
-            // Agar bisa discroll jika keyboard muncul
+            // wadah untuk input field
             child: Form(
+              // menyusun widget secara vertikal
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
