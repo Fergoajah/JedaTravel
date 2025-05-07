@@ -1,7 +1,7 @@
 // Import paket Flutter untuk membuat UI
 import 'package:flutter/material.dart';
 
-// Halaman detail konten (seperti artikel atau tempat wisata)
+// Halaman detail konten
 class KontenPage extends StatefulWidget {
   final String title; // Judul konten
   final String image; // Gambar utama
@@ -28,7 +28,7 @@ class _KontenPageState extends State<KontenPage> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          // Tombol kembali
+          // Button Back
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context); // Kembali ke halaman sebelumnya
@@ -37,9 +37,9 @@ class _KontenPageState extends State<KontenPage> {
         title: Text(widget.title), // Menampilkan judul konten
         actions: [
           IconButton(
-            // Tombol toggle tema
+            // Button toggle tema mode
             icon: Icon(widget.isDarkMode ? Icons.dark_mode : Icons.light_mode),
-            onPressed: widget.toggleTheme, // Memanggil fungsi toggle tema
+            onPressed: widget.toggleTheme, // Memanggil fungsi tema
           ),
         ],
       ),
@@ -69,7 +69,6 @@ class IconButtonSection extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 6.0, horizontal: 32.0),
       child: IconTheme(
-        // Menentukan gaya default untuk ikon
         data: IconThemeData(
           size: 36,
           color: isDarkMode ? Colors.white54 : Colors.black54,
@@ -173,19 +172,19 @@ class MorePlacesSection extends StatelessWidget {
   // Daftar tempat lainnya
   final List<Map<String, String>> morePlaces = const [
     {
-      'image': 'images/fumotoppara.jpg',
+      'image': 'assets/images/fumotoppara.jpg',
       'title': 'Fumotoppara Campground',
       'description':
           'Fumotoppara Campground is a renowned camping destination located in Fujinomiya City, Shizuoka Prefecture, Japan. ',
     },
     {
-      'image': 'images/Hottarakashi.jpg',
+      'image': 'assets/images/Hottarakashi.jpg',
       'title': 'Hottarakashi Camping Ground',
       'description':
           'Hottarakashi Camping Ground is a scenic campsite located in Yamanashi Prefecture, Japan, at an altitude of approximately 700 meters.',
     },
     {
-      'image': 'images/francis.jpg',
+      'image': 'assets/images/francis.jpg',
       'title': 'Francis Beach Campground',
       'description':
           'Francis Beach Campground is a coastal camping destination located within Half Moon Bay State Beach in California. It offers 52 campsites suitable for tents, trailers, and RVs up to 40 feet in length.',
@@ -205,14 +204,14 @@ class MorePlacesSection extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           ListView.builder(
-            shrinkWrap: true, // Agar list tidak memakan seluruh tinggi
+            shrinkWrap: true,
             physics:
-                const NeverScrollableScrollPhysics(), // Menonaktifkan scroll internal
+                const NeverScrollableScrollPhysics(), // Menonaktifkan scroll listview
             itemCount: morePlaces.length,
             itemBuilder: (context, index) {
               final place = morePlaces[index];
               return Material(
-                color: Colors.transparent, // Dibutuhkan untuk efek ripple
+                color: Colors.transparent,
                 child: InkWell(
                   onTap: () {
                     // Navigasi ke halaman KontenPage dengan detail baru
@@ -240,6 +239,7 @@ class MorePlacesSection extends StatelessWidget {
                           fit: BoxFit.cover,
                         ),
                         const SizedBox(width: 12),
+                        // Informasi judul dan deskripsi singkat
                         Expanded(
                           child: Padding(
                             padding: const EdgeInsets.symmetric(vertical: 8),
@@ -260,7 +260,7 @@ class MorePlacesSection extends StatelessWidget {
                                   maxLines: 3,
                                   overflow:
                                       TextOverflow
-                                          .ellipsis, // Potong teks jika terlalu panjang
+                                          .ellipsis, // potong teks descriptioin di homepage
                                 ),
                               ],
                             ),

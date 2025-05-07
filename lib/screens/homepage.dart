@@ -14,9 +14,9 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  bool _isDarkMode = false; // Variabel untuk menyimpan mode tema
+  bool _isDarkMode = false; // Variabel untuk menyimpan Mode Darkmode
 
-  // Fungsi untuk mengganti tema
+  // Fungsi untuk mengganti tema darkmode aplikasi
   void _toggleTheme() {
     setState(() {
       _isDarkMode = !_isDarkMode;
@@ -26,7 +26,8 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, // Menghilangkan label debug
+      debugShowCheckedModeBanner:
+          false, // Menghilangkan label debug saat dijalankan
       theme: _isDarkMode ? ThemeData.dark() : ThemeData.light(), // Ganti tema
       home: HomePage(toggleTheme: _toggleTheme, isDarkMode: _isDarkMode),
     );
@@ -77,7 +78,7 @@ class _HomePageState extends State<HomePage> {
       // Konten bergantung pada bottom navigation index
       body: _currentIndex == 0 ? _buildHomeContent() : _buildProfileContent(),
 
-      // Navigasi bawah untuk berpindah antara home dan profile
+      // Bottom Navigation untuk berpindah antara home dan profile
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         selectedItemColor: widget.isDarkMode ? Colors.amber : Colors.black,
@@ -123,14 +124,14 @@ class _HomePageState extends State<HomePage> {
 
         const SizedBox(height: 20),
 
-        // Carousel foto destinasi
+        // Carousel slider
         CarouselSlider(
           items: [
-            _buildImageCard("images/lake.jpg"),
-            _buildImageCard("images/francis.jpg"),
-            _buildImageCard("images/fumotoppara.jpg"),
-            _buildImageCard("images/Hottarakashi.jpg"),
-            _buildImageCard("images/oeschinen1.jpg"),
+            _buildImageCard("assets/images/lake.jpg"),
+            _buildImageCard("assets/images/francis.jpg"),
+            _buildImageCard("assets/images/fumotoppara.jpg"),
+            _buildImageCard("assets/images/Hottarakashi.jpg"),
+            _buildImageCard("assets/images/oeschinen1.jpg"),
           ],
           options: CarouselOptions(
             height: 250.0,
@@ -152,7 +153,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  // Card untuk carousel image
+  // Card untuk carousel image dan styling
   Widget _buildImageCard(String assetPath) {
     return Container(
       margin: const EdgeInsets.all(6.0),
@@ -174,29 +175,30 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-// Widget rekomendasi tempat yang dapat diklik
+// Widget rekomendasi tempat yang akan mengarah ke dalam konten.dart
 class RecomendationPlace extends StatelessWidget {
   const RecomendationPlace({super.key});
 
   @override
   Widget build(BuildContext context) {
     const List<Map<String, String>> morePlaces = [
+      //list tempat rekomendasi dari image title dan description
       {
-        'image': 'images/fumotoppara.jpg',
+        'image': 'assets/images/fumotoppara.jpg',
         'title': 'Fumotoppara Campground',
         'description':
             'Fumotoppara Campground adalah salah satu tempat berkemah paling ikonik di Jepang, terletak di Asagiri Kogen, Kota Fujinomiya, Prefektur Shizuoka. Dikenal karena pemandangan Gunung Fuji yang menakjubkan tanpa halangan, area ini menawarkan padang rumput luas seluas sekitar 30 hektar, memungkinkan pengunjung untuk mendirikan tenda di mana saja sesuai keinginan. Kebebasan ini memberikan pengalaman berkemah yang fleksibel dan pribadi, menjadikannya favorit di kalangan keluarga, pemula, maupun penggemar alam yang mencari ketenangan dan keindahan alam.\n\n'
             'Fasilitas di Fumotoppara sangat lengkap, termasuk toilet modern dengan kursi berpemanas, area memasak, toko perlengkapan, dan restoran Kanayama Terrace yang menyajikan hidangan lokal seperti daging rusa (gibier). Pengunjung juga dapat menikmati pemandangan Gunung Fuji yang berubah-ubah tergantung waktu dan cuaca, serta langit malam yang dipenuhi bintang karena minimnya polusi cahaya. Dengan biaya berkemah yang terjangkau dan suasana yang damai, Fumotoppara menjadi destinasi ideal bagi mereka yang ingin merasakan kedekatan dengan alam sambil menikmati kenyamanan fasilitas modern.',
       },
       {
-        'image': 'images/lake.jpg',
+        'image': 'assets/images/lake.jpg',
         'title': 'Oeschinen Lake',
         'description':
             'Oeschinen Lake Campground terletak di dekat Danau Oeschinen (Oeschinensee), sebuah danau pegunungan yang memukau di wilayah Kandersteg, Swiss. Terletak di jantung Pegunungan Alpen Bernese, tempat ini menawarkan pemandangan alam yang spektakuler dengan air danau berwarna biru kehijauan yang jernih, dikelilingi oleh tebing dan puncak gunung yang menjulang tinggi.\n\n'
             'Area perkemahan ini cocok bagi pecinta alam yang ingin merasakan kedamaian dan keindahan lanskap pegunungan sambil bermalam di alam terbuka.Campground ini menjadi titik awal yang ideal untuk berbagai aktivitas luar ruangan seperti hiking, berenang di danau (pada musim panas), atau sekadar bersantai menikmati panorama. Dengan fasilitas dasar yang cukup dan akses yang mudah dari Kandersteg—baik dengan kereta gantung maupun jalur pendakian—Oeschinen Lake Campground adalah pilihan populer bagi wisatawan dan pendaki yang ingin menikmati pengalaman berkemah autentik di tengah keindahan alam Swiss.',
       },
       {
-        'image': 'images/francis.jpg',
+        'image': 'assets/images/francis.jpg',
         'title': 'Francis Beach Campground',
         'description':
             'Francis Beach Campground terletak di Half Moon Bay State Beach, California, dan menawarkan pengalaman berkemah yang menenangkan di tepi Samudra Pasifik. Dengan 52 lokasi perkemahan yang tersedia sepanjang tahun, tempat ini cocok untuk tenda maupun RV hingga panjang 40 kaki. Beberapa lokasi menyediakan sambungan listrik, sementara fasilitas lainnya mencakup meja piknik, ring api unggun, toilet flush, dan shower berbayar. Meskipun tidak ada sambungan air atau saluran pembuangan langsung, tersedia stasiun pengisian air dan pembuangan limbah di dekat pintu masuk.\n\n'
@@ -215,7 +217,17 @@ class RecomendationPlace extends StatelessWidget {
           alignment: Alignment.centerLeft, // bisa diatur ke kiri, kanan, dll.
           child: SizedBox(
             width: 300, // atur panjang garis manual
-            child: const Divider(color: Colors.black, thickness: 1),
+            child: Builder(
+              //memberikan garis hitam dibawah text dan kondisi jika gelap dan terang
+              builder: (context) {
+                final isDarkMode =
+                    Theme.of(context).brightness == Brightness.dark;
+                return Divider(
+                  color: isDarkMode ? Colors.white : Colors.black,
+                  thickness: 1,
+                );
+              },
+            ),
           ),
         ),
 
@@ -223,13 +235,14 @@ class RecomendationPlace extends StatelessWidget {
         ListView.builder(
           itemCount: morePlaces.length,
           shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(), // nonaktifkan scroll ListView
           itemBuilder: (context, index) {
             final place = morePlaces[index];
             return Material(
               color: Colors.transparent,
               child: InkWell(
                 onTap: () {
+                  // navigasi ke halaman konten.dart atau detail konten
                   Navigator.pushNamed(
                     context,
                     '/konten',
@@ -257,6 +270,7 @@ class RecomendationPlace extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(width: 12),
+                      // Informasi judul dan deskripsi singkat
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.symmetric(vertical: 8),
@@ -277,7 +291,7 @@ class RecomendationPlace extends StatelessWidget {
                                   color: Color.fromARGB(255, 141, 141, 141),
                                 ),
                                 maxLines: 3,
-                                overflow: TextOverflow.ellipsis,
+                                overflow: TextOverflow.ellipsis,  // potong teks descriptioin di homepage
                               ),
                             ],
                           ),
