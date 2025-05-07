@@ -1,9 +1,10 @@
-# Flutter APK: Membangun Layout
+# Flutter APK: JedaTravel
 
 Sebuah aplikasi Flutter yang dibuat dengan mengikuti tutorial resmi dari Flutter:  
 ➡️ [https://docs.flutter.dev/ui/layout/tutorial](https://docs.flutter.dev/ui/layout/tutorial)
 
 Proyek ini dibuat untuk mempraktikkan konsep layout UI seperti penggunaan Row, Column, Container, dan pengaturan teks.
+Dan Juga lanjutan dari Tutorial tersebut dengan menambahkan beberapa fitur
 
 ## 📚 Referensi Tutorial
 
@@ -27,8 +28,8 @@ Aplikasi ini dikembangkan berdasarkan panduan resmi Flutter:
 ### Cara Instalasi
 
 ```bash
-git clone https://github.com/Fergoajah/Flutter-APK-2-Building-Layouts-.git
-cd Flutter-APK-2-Building-Layouts-
+git clone https://github.com/Fergoajah/JedaTravel.git
+cd JedaTravel
 flutter pub get
 flutter run
 ```
@@ -46,6 +47,5 @@ build/app/outputs/flutter-apk/app-release.apk
 
 ## 📱 Preview Aplikasi
 
-Berikut adalah tampilan aplikasi Flutter yang dibuat berdasarkan tutorial [Flutter Layout](https://docs.flutter.dev/ui/layout/tutorial):
+Berikut adalah tampilan aplikasi Flutter Jeda Travel
 
-![flutter-build-layout](https://github.com/user-attachments/assets/6e57865d-0bf0-4406-8def-10ff55524ced)
